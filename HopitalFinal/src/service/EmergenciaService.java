@@ -3,14 +3,16 @@ package service;
 import dao.EmergenciaDAO;
 import model.Emergencia;
 
-public class EmergenciaService {
+public class EmergenciaService implements IService<Emergencia> {
     private EmergenciaDAO emergenciaDAO = new EmergenciaDAO();
 
-    public boolean registrarEmergencia(Emergencia emergencia) {
+    @Override
+    public boolean registrar(Emergencia emergencia) {
         return emergenciaDAO.registrar(emergencia);
     }
 
-    public void listarEmergencias() {
+    @Override
+    public void listar() {
         emergenciaDAO.listar();
     }
 }

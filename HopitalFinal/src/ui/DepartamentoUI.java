@@ -18,7 +18,7 @@ public class DepartamentoUI {
             int id = Integer.parseInt(idInput);
             Departamento depto = new Departamento(id, nombre);
 
-            if (deptoService.registrarDepartamento(depto)) {
+            if (deptoService.registrar(depto)) {
                 JOptionPane.showMessageDialog(null, "Departamento registrado exitosamente.");
             } else {
                 JOptionPane.showMessageDialog(null, "Error al registrar departamento.");
@@ -29,7 +29,7 @@ public class DepartamentoUI {
     }
 
     public void listarDepartamentos() {
-        deptoService.listarDepartamentos();
+        deptoService.listar();
         JOptionPane.showMessageDialog(null, "Departamentos listados en consola.");
     }
 }

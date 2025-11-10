@@ -39,7 +39,7 @@ public class SignosVitalesUI {
 
             SignosVitales signos = new SignosVitales(id, paciente, fechaSignos, temperatura, presion, frecuencia);
 
-            if (signosService.registrarSignosVitales(signos)) {
+            if (signosService.registrar(signos)) {
                 JOptionPane.showMessageDialog(null, "Signos vitales registrados exitosamente.");
             } else {
                 JOptionPane.showMessageDialog(null, "Error al registrar signos vitales.");
@@ -50,7 +50,7 @@ public class SignosVitalesUI {
     }
 
     public void listarSignosVitales() {
-        signosService.listarSignosVitales();
+        signosService.listar();
         JOptionPane.showMessageDialog(null, "Signos vitales listados en consola.");
     }
 }

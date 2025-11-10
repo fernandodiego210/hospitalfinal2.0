@@ -21,7 +21,7 @@ public class LaboratorioUI {
             int id = Integer.parseInt(idInput);
             Laboratorio laboratorio = new Laboratorio(id, nombre, direccion);
 
-            if (laboratorioService.registrarLaboratorio(laboratorio)) {
+            if (laboratorioService.registrar(laboratorio)) {
                 JOptionPane.showMessageDialog(null, "Laboratorio registrado exitosamente.");
             } else {
                 JOptionPane.showMessageDialog(null, "Error al registrar laboratorio.");
@@ -32,7 +32,7 @@ public class LaboratorioUI {
     }
 
     public void listarLaboratorios() {
-        laboratorioService.listarLaboratorios();
+        laboratorioService.listar();
         JOptionPane.showMessageDialog(null, "Laboratorios listados en consola.");
     }
 }

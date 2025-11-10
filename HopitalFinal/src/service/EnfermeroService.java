@@ -3,14 +3,16 @@ package service;
 import dao.EnfermeroDAO;
 import model.Enfermero;
 
-public class EnfermeroService {
+public class EnfermeroService implements IService<Enfermero> {
     private EnfermeroDAO enfermeroDAO = new EnfermeroDAO();
 
-    public boolean registrarEnfermero(Enfermero enfermero) {
+    @Override
+    public boolean registrar(Enfermero enfermero) {
         return enfermeroDAO.registrar(enfermero);
     }
 
-    public void listarEnfermeros() {
+    @Override
+    public void listar() {
         enfermeroDAO.listar();
     }
 }

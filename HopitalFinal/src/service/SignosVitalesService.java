@@ -3,14 +3,16 @@ package service;
 import dao.SignosVitalesDAO;
 import model.SignosVitales;
 
-public class SignosVitalesService {
+public class SignosVitalesService implements IService<SignosVitales> {
     private SignosVitalesDAO signosDAO = new SignosVitalesDAO();
 
-    public boolean registrarSignosVitales(SignosVitales signos) {
+    @Override
+    public boolean registrar(SignosVitales signos) {
         return signosDAO.registrar(signos);
     }
 
-    public void listarSignosVitales() {
+    @Override
+    public void listar() {
         signosDAO.listar();
     }
 }

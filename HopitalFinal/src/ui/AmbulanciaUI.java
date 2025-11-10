@@ -21,7 +21,7 @@ public class AmbulanciaUI {
             boolean disponible = Boolean.parseBoolean(disponibleInput);
             Ambulancia ambulancia = new Ambulancia(placa, tipo, disponible);
 
-            if (ambulanciaService.registrarAmbulancia(ambulancia)) {
+            if (ambulanciaService.registrar(ambulancia)) {
                 JOptionPane.showMessageDialog(null, "Ambulancia registrada exitosamente.");
             } else {
                 JOptionPane.showMessageDialog(null, "Error al registrar ambulancia.");
@@ -32,7 +32,7 @@ public class AmbulanciaUI {
     }
 
     public void listarAmbulancias() {
-        ambulanciaService.listarAmbulancias();
+        ambulanciaService.listar();
         JOptionPane.showMessageDialog(null, "Ambulancias listadas en consola.");
     }
 }

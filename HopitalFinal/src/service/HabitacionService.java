@@ -3,14 +3,16 @@ package service;
 import dao.HabitacionDAO;
 import model.Habitacion;
 
-public class HabitacionService {
+public class HabitacionService implements IService<Habitacion> {
     private HabitacionDAO habitacionDAO = new HabitacionDAO();
 
-    public boolean registrarHabitacion(Habitacion habitacion) {
+    @Override
+    public boolean registrar(Habitacion habitacion) {
         return habitacionDAO.registrar(habitacion);
     }
 
-    public void listarHabitaciones() {
+    @Override
+    public void listar() {
         habitacionDAO.listar();
     }
 }

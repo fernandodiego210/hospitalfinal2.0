@@ -21,7 +21,7 @@ public class SeguroMedicoUI {
             int id = Integer.parseInt(idInput);
             SeguroMedico seguro = new SeguroMedico(id, nombre, tipo);
 
-            if (seguroService.registrarSeguroMedico(seguro)) {
+            if (seguroService.registrar(seguro)) {
                 JOptionPane.showMessageDialog(null, "Seguro médico registrado exitosamente.");
             } else {
                 JOptionPane.showMessageDialog(null, "Error al registrar seguro médico.");
@@ -32,7 +32,7 @@ public class SeguroMedicoUI {
     }
 
     public void listarSegurosMedicos() {
-        seguroService.listarSegurosMedicos();
+        seguroService.listar();
         JOptionPane.showMessageDialog(null, "Seguros médicos listados en consola.");
     }
 }

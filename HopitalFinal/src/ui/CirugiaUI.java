@@ -37,7 +37,7 @@ public class CirugiaUI {
 
             Cirugia cirugia = new Cirugia(id, paciente, doctor, fechaCirugia, tipo, resultado);
 
-            if (cirugiaService.registrarCirugia(cirugia)) {
+            if (cirugiaService.registrar(cirugia)) {
                 JOptionPane.showMessageDialog(null, "Cirugía registrada exitosamente.");
             } else {
                 JOptionPane.showMessageDialog(null, "Error al registrar cirugía.");
@@ -48,7 +48,7 @@ public class CirugiaUI {
     }
 
     public void listarCirugias() {
-        cirugiaService.listarCirugias();
+        cirugiaService.listar();
         JOptionPane.showMessageDialog(null, "Cirugías listadas en consola.");
     }
 }

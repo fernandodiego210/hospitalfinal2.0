@@ -24,7 +24,7 @@ public class DoctorUI {
             int deptoId = Integer.parseInt(deptoInput);
             Doctor doctor = new Doctor(nombre, id, especialidad, deptoId);
 
-            if (doctorService.registrarDoctor(doctor)) {
+            if (doctorService.registrar(doctor)) {
                 JOptionPane.showMessageDialog(null, "Doctor registrado exitosamente.");
             } else {
                 JOptionPane.showMessageDialog(null, "Error al registrar doctor.");
@@ -35,7 +35,7 @@ public class DoctorUI {
     }
 
     public void listarDoctores() {
-        doctorService.listarDoctores();
+        doctorService.listar();
         JOptionPane.showMessageDialog(null, "Doctores listados en consola.");
     }
 }

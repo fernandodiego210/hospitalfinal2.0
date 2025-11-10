@@ -37,7 +37,7 @@ public class OrdenExamenUI {
 
             OrdenExamen orden = new OrdenExamen(id, paciente, doctor, fechaOrden, tipo, resultado);
 
-            if (ordenService.registrarOrdenExamen(orden)) {
+            if (ordenService.registrar(orden)) {
                 JOptionPane.showMessageDialog(null, "Orden de examen registrada exitosamente.");
             } else {
                 JOptionPane.showMessageDialog(null, "Error al registrar orden de examen.");
@@ -48,7 +48,7 @@ public class OrdenExamenUI {
     }
 
     public void listarOrdenesExamen() {
-        ordenService.listarOrdenesExamen();
+        ordenService.listar();
         JOptionPane.showMessageDialog(null, "Órdenes de examen listadas en consola.");
     }
 }

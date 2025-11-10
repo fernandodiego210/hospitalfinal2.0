@@ -3,14 +3,16 @@ package service;
 import dao.SeguroMedicoDAO;
 import model.SeguroMedico;
 
-public class SeguroMedicoService {
+public class SeguroMedicoService implements IService<SeguroMedico> {
     private SeguroMedicoDAO seguroDAO = new SeguroMedicoDAO();
 
-    public boolean registrarSeguroMedico(SeguroMedico seguro) {
+    @Override
+    public boolean registrar(SeguroMedico seguro) {
         return seguroDAO.registrar(seguro);
     }
 
-    public void listarSegurosMedicos() {
+    @Override
+    public void listar() {
         seguroDAO.listar();
     }
 }

@@ -9,7 +9,7 @@ public abstract class Persona {
         this.id = id;
     }
 
-    // ✅ Getters públicos
+
     public String getNombre() {
         return nombre;
     }

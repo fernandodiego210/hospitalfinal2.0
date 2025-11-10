@@ -27,7 +27,7 @@ public class MedicamentoUI {
 
             Medicamento medicamento = new Medicamento(id, nombre, stock, precio);
 
-            if (medicamentoService.registrarMedicamento(medicamento)) {
+            if (medicamentoService.registrar(medicamento)) {
                 JOptionPane.showMessageDialog(null, "Medicamento registrado exitosamente.");
             } else {
                 JOptionPane.showMessageDialog(null, "Error al registrar medicamento.");
@@ -38,7 +38,7 @@ public class MedicamentoUI {
     }
 
     public void listarMedicamentos() {
-        medicamentoService.listarMedicamentos();
+        medicamentoService.listar();
         JOptionPane.showMessageDialog(null, "Medicamentos listados en consola.");
     }
 }

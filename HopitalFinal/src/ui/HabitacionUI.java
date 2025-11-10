@@ -31,7 +31,7 @@ public class HabitacionUI {
 
             Habitacion habitacion = new Habitacion(id, numero, tipo, estado, depto);
 
-            if (habitacionService.registrarHabitacion(habitacion)) {
+            if (habitacionService.registrar(habitacion)) {
                 JOptionPane.showMessageDialog(null, "Habitación registrada exitosamente.");
             } else {
                 JOptionPane.showMessageDialog(null, "Error al registrar habitación.");
@@ -42,7 +42,7 @@ public class HabitacionUI {
     }
 
     public void listarHabitaciones() {
-        habitacionService.listarHabitaciones();
+        habitacionService.listar();
         JOptionPane.showMessageDialog(null, "Habitaciones listadas en consola.");
     }
 }

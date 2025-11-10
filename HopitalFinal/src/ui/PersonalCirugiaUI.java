@@ -19,7 +19,7 @@ public class PersonalCirugiaUI {
 
         PersonalCirugia personal = new PersonalCirugia(nombre, id, rol);
 
-        if (personalService.registrarPersonalCirugia(personal)) {
+        if (personalService.registrar(personal)) {
             JOptionPane.showMessageDialog(null, "Personal de cirugía registrado exitosamente.");
         } else {
             JOptionPane.showMessageDialog(null, "Error al registrar personal de cirugía.");
@@ -27,7 +27,7 @@ public class PersonalCirugiaUI {
     }
 
     public void listarPersonalCirugia() {
-        personalService.listarPersonalCirugia();
+        personalService.listar();
         JOptionPane.showMessageDialog(null, "Personal de cirugía listado en consola.");
     }
 }

@@ -33,7 +33,7 @@ public class EmergenciaUI {
 
             Emergencia emergencia = new Emergencia(0, paciente, doctor, fechaEmergencia, descripcion, prioridad);
 
-            if (emergenciaService.registrarEmergencia(emergencia)) {
+            if (emergenciaService.registrar(emergencia)) {
                 JOptionPane.showMessageDialog(null, "Emergencia registrada exitosamente.");
             } else {
                 JOptionPane.showMessageDialog(null, "Error al registrar emergencia.");
@@ -44,7 +44,7 @@ public class EmergenciaUI {
     }
 
     public void listarEmergencias() {
-        emergenciaService.listarEmergencias();
+        emergenciaService.listar();
         JOptionPane.showMessageDialog(null, "Emergencias listadas en consola.");
     }
 }

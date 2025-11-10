@@ -30,7 +30,7 @@ public class CitaUI {
 
             Cita cita = new Cita(0, paciente, doctor, fechaCita, motivo);
 
-            if (citaService.registrarCita(cita)) {
+            if (citaService.registrar(cita)) {
                 JOptionPane.showMessageDialog(null, "Cita registrada exitosamente.");
             } else {
                 JOptionPane.showMessageDialog(null, "Error al registrar cita.");
@@ -41,7 +41,7 @@ public class CitaUI {
     }
 
     public void listarCitas() {
-        citaService.listarCitas();
+        citaService.listar();
         JOptionPane.showMessageDialog(null, "Citas listadas en consola.");
     }
 }

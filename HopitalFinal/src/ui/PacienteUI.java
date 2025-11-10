@@ -22,7 +22,7 @@ public class PacienteUI {
 
         Paciente paciente = new Paciente(nombre, id, enfermedad, seguro);
 
-        if (pacienteService.registrarPaciente(paciente)) {
+        if (pacienteService.registrar(paciente)) {
             JOptionPane.showMessageDialog(null, "Paciente registrado exitosamente.");
         } else {
             JOptionPane.showMessageDialog(null, "Error al registrar paciente.");
@@ -30,7 +30,7 @@ public class PacienteUI {
     }
 
     public void listarPacientes() {
-        pacienteService.listarPacientes();
+        pacienteService.listar();
         JOptionPane.showMessageDialog(null, "Pacientes listados en consola.");
     }
 }

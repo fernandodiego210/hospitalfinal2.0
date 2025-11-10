@@ -3,14 +3,16 @@ package service;
 import dao.EspecialidadDAO;
 import model.Especialidad;
 
-public class EspecialidadService {
+public class EspecialidadService implements IService<Especialidad> {
     private EspecialidadDAO especialidadDAO = new EspecialidadDAO();
 
-    public boolean registrarEspecialidad(Especialidad especialidad) {
+    @Override
+    public boolean registrar(Especialidad especialidad) {
         return especialidadDAO.registrar(especialidad);
     }
 
-    public void listarEspecialidades() {
+    @Override
+    public void listar() {
         especialidadDAO.listar();
     }
 }

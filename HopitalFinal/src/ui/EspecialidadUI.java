@@ -18,7 +18,7 @@ public class EspecialidadUI {
             int id = Integer.parseInt(idInput);
             Especialidad especialidad = new Especialidad(id, nombre);
 
-            if (especialidadService.registrarEspecialidad(especialidad)) {
+            if (especialidadService.registrar(especialidad)) {
                 JOptionPane.showMessageDialog(null, "Especialidad registrada exitosamente.");
             } else {
                 JOptionPane.showMessageDialog(null, "Error al registrar especialidad.");
@@ -29,7 +29,7 @@ public class EspecialidadUI {
     }
 
     public void listarEspecialidades() {
-        especialidadService.listarEspecialidades();
+        especialidadService.listar();
         JOptionPane.showMessageDialog(null, "Especialidades listadas en consola.");
     }
 }

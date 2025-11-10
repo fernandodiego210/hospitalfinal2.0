@@ -18,7 +18,7 @@ public class TipoExamenUI {
             int id = Integer.parseInt(idInput);
             TipoExamen tipo = new TipoExamen(id, nombre);
 
-            if (tipoService.registrarTipoExamen(tipo)) {
+            if (tipoService.registrar(tipo)) {
                 JOptionPane.showMessageDialog(null, "Tipo de examen registrado exitosamente.");
             } else {
                 JOptionPane.showMessageDialog(null, "Error al registrar tipo de examen.");
@@ -29,7 +29,7 @@ public class TipoExamenUI {
     }
 
     public void listarTiposExamen() {
-        tipoService.listarTiposExamen();
+        tipoService.listar();
         JOptionPane.showMessageDialog(null, "Tipos de examen listados en consola.");
     }
 }

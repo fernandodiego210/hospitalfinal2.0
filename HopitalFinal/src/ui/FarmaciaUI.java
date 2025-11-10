@@ -21,7 +21,7 @@ public class FarmaciaUI {
             int id = Integer.parseInt(idInput);
             Farmacia farmacia = new Farmacia(id, nombre, direccion);
 
-            if (farmaciaService.registrarFarmacia(farmacia)) {
+            if (farmaciaService.registrar(farmacia)) {
                 JOptionPane.showMessageDialog(null, "Farmacia registrada exitosamente.");
             } else {
                 JOptionPane.showMessageDialog(null, "Error al registrar farmacia.");
@@ -32,7 +32,7 @@ public class FarmaciaUI {
     }
 
     public void listarFarmacias() {
-        farmaciaService.listarFarmacias();
+        farmaciaService.listar();
         JOptionPane.showMessageDialog(null, "Farmacias listadas en consola.");
     }
 }

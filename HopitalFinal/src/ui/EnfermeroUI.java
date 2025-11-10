@@ -22,7 +22,7 @@ public class EnfermeroUI {
 
         Enfermero enfermero = new Enfermero(nombre, id, area, turno);
 
-        if (enfermeroService.registrarEnfermero(enfermero)) {
+        if (enfermeroService.registrar(enfermero)) {
             JOptionPane.showMessageDialog(null, "Enfermero registrado exitosamente.");
         } else {
             JOptionPane.showMessageDialog(null, "Error al registrar enfermero.");
@@ -30,7 +30,7 @@ public class EnfermeroUI {
     }
 
     public void listarEnfermeros() {
-        enfermeroService.listarEnfermeros();
+        enfermeroService.listar();
         JOptionPane.showMessageDialog(null, "Enfermeros listados en consola.");
     }
 }
