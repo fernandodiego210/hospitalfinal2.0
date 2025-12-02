@@ -3,14 +3,16 @@ package service;
 import dao.CirugiaDAO;
 import model.Cirugia;
 
-public class CirugiaService {
+public class CirugiaService implements IService<Cirugia> {
     private CirugiaDAO cirugiaDAO = new CirugiaDAO();
 
-    public boolean registrarCirugia(Cirugia cirugia) {
+    @Override
+    public boolean registrar(Cirugia cirugia) {
         return cirugiaDAO.registrar(cirugia);
     }
 
-    public void listarCirugias() {
+    @Override
+    public void listar() {
         cirugiaDAO.listar();
     }
 }
