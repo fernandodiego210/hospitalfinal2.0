@@ -3,14 +3,16 @@ package service;
 import dao.PacienteDAO;
 import model.Paciente;
 
-public class PacienteService {
+public class PacienteService implements IService<Paciente> {
     private PacienteDAO pacienteDAO = new PacienteDAO();
 
-    public boolean registrarPaciente(Paciente paciente) {
+    @Override
+    public boolean registrar(Paciente paciente) {
         return pacienteDAO.registrar(paciente);
     }
 
-    public void listarPacientes() {
+    @Override
+    public void listar() {
         pacienteDAO.listar();
     }
 }
