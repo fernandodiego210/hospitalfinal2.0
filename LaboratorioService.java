@@ -3,14 +3,16 @@ package service;
 import dao.LaboratorioDAO;
 import model.Laboratorio;
 
-public class LaboratorioService {
+public class LaboratorioService implements IService<Laboratorio> {
     private LaboratorioDAO laboratorioDAO = new LaboratorioDAO();
 
-    public boolean registrarLaboratorio(Laboratorio laboratorio) {
+    @Override
+    public boolean registrar(Laboratorio laboratorio) {
         return laboratorioDAO.registrar(laboratorio);
     }
 
-    public void listarLaboratorios() {
+    @Override
+    public void listar() {
         laboratorioDAO.listar();
     }
 }
