@@ -3,14 +3,16 @@ package service;
 import dao.TipoExamenDAO;
 import model.TipoExamen;
 
-public class TipoExamenService {
+public class TipoExamenService implements IService<TipoExamen> {
     private TipoExamenDAO tipoDAO = new TipoExamenDAO();
 
-    public boolean registrarTipoExamen(TipoExamen tipo) {
+    @Override
+    public boolean registrar(TipoExamen tipo) {
         return tipoDAO.registrar(tipo);
     }
 
-    public void listarTiposExamen() {
+    @Override
+    public void listar() {
         tipoDAO.listar();
     }
 }
