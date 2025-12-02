@@ -3,14 +3,16 @@ package service;
 import dao.AmbulanciaDAO;
 import model.Ambulancia;
 
-public class AmbulanciaService {
+public class AmbulanciaService implements IService<Ambulancia> {
     private AmbulanciaDAO ambulanciaDAO = new AmbulanciaDAO();
 
-    public boolean registrarAmbulancia(Ambulancia ambulancia) {
+    @Override
+    public boolean registrar(Ambulancia ambulancia) {
         return ambulanciaDAO.registrar(ambulancia);
     }
 
-    public void listarAmbulancias() {
+    @Override
+    public void listar() {
         ambulanciaDAO.listar();
     }
 }
