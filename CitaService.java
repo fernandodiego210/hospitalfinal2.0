@@ -3,14 +3,16 @@ package service;
 import dao.CitaDAO;
 import model.Cita;
 
-public class CitaService {
+public class CitaService implements IService<Cita> {
     private CitaDAO citaDAO = new CitaDAO();
 
-    public boolean registrarCita(Cita cita) {
+    @Override
+    public boolean registrar(Cita cita) {
         return citaDAO.registrar(cita);
     }
 
-    public void listarCitas() {
+    @Override
+    public void listar() {
         citaDAO.listar();
     }
 }

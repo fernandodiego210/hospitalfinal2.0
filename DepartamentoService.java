@@ -3,14 +3,16 @@ package service;
 import dao.DepartamentoDAO;
 import model.Departamento;
 
-public class DepartamentoService {
+public class DepartamentoService implements IService<Departamento> {
     private DepartamentoDAO deptoDAO = new DepartamentoDAO();
 
-    public boolean registrarDepartamento(Departamento depto) {
+    @Override
+    public boolean registrar(Departamento depto) {
         return deptoDAO.registrar(depto);
     }
 
-    public void listarDepartamentos() {
+    @Override
+    public void listar() {
         deptoDAO.listar();
     }
 }
