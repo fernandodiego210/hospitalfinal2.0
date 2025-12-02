@@ -3,14 +3,16 @@ package service;
 import dao.OrdenExamenDAO;
 import model.OrdenExamen;
 
-public class OrdenExamenService {
+public class OrdenExamenService implements IService<OrdenExamen> {
     private OrdenExamenDAO ordenDAO = new OrdenExamenDAO();
 
-    public boolean registrarOrdenExamen(OrdenExamen orden) {
+    @Override
+    public boolean registrar(OrdenExamen orden) {
         return ordenDAO.registrar(orden);
     }
 
-    public void listarOrdenesExamen() {
+    @Override
+    public void listar() {
         ordenDAO.listar();
     }
 }
