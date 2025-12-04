@@ -15,4 +15,16 @@ public class OrdenExamenService implements IService<OrdenExamen> {
     public void listar() {
         ordenDAO.listar();
     }
+
+    public OrdenExamen obtenerPorId(int id) {
+        return ordenDAO.obtenerPorId(id);
+    }
+
+    public boolean actualizar(OrdenExamen orden, int id) {
+        return ordenDAO.actualizar(orden, id);
+    }
+
+    public boolean eliminar(int id) {
+        return ordenDAO.eliminar(id);
+    }
 }

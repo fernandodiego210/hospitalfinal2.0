@@ -15,4 +15,16 @@ public class AmbulanciaService implements IService<Ambulancia> {
     public void listar() {
         ambulanciaDAO.listar();
     }
+
+    public Ambulancia obtenerPorId(int id) {
+        return ambulanciaDAO.obtenerPorId(id);
+    }
+
+    public boolean actualizar(Ambulancia ambulancia, int id) {
+        return ambulanciaDAO.actualizar(ambulancia, id);
+    }
+
+    public boolean eliminar(int id) {
+        return ambulanciaDAO.eliminar(id);
+    }
 }

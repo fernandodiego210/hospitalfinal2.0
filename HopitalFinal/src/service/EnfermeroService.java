@@ -15,4 +15,16 @@ public class EnfermeroService implements IService<Enfermero> {
     public void listar() {
         enfermeroDAO.listar();
     }
+
+    public Enfermero obtenerPorId(String id) {
+        return enfermeroDAO.obtenerPorId(id);
+    }
+
+    public boolean actualizar(Enfermero enfermero, String id) {
+        return enfermeroDAO.actualizar(enfermero, id);
+    }
+
+    public boolean eliminar(String id) {
+        return enfermeroDAO.eliminar(id);
+    }
 }

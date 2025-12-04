@@ -15,4 +15,16 @@ public class MedicamentoService implements IService<Medicamento> {
     public void listar() {
         medicamentoDAO.listar();
     }
+
+    public Medicamento obtenerPorId(int id) {
+        return medicamentoDAO.obtenerPorId(id);
+    }
+
+    public boolean actualizar(Medicamento medicamento, int id) {
+        return medicamentoDAO.actualizar(medicamento, id);
+    }
+
+    public boolean eliminar(int id) {
+        return medicamentoDAO.eliminar(id);
+    }
 }

@@ -15,4 +15,16 @@ public class SignosVitalesService implements IService<SignosVitales> {
     public void listar() {
         signosDAO.listar();
     }
+
+    public SignosVitales obtenerPorId(int id) {
+        return signosDAO.obtenerPorId(id);
+    }
+
+    public boolean actualizar(SignosVitales signos, int id) {
+        return signosDAO.actualizar(signos, id);
+    }
+
+    public boolean eliminar(int id) {
+        return signosDAO.eliminar(id);
+    }
 }

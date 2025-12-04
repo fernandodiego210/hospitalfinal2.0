@@ -15,4 +15,16 @@ public class EspecialidadService implements IService<Especialidad> {
     public void listar() {
         especialidadDAO.listar();
     }
+
+    public Especialidad obtenerPorId(int id) {
+        return especialidadDAO.obtenerPorId(id);
+    }
+
+    public boolean actualizar(Especialidad especialidad, int id) {
+        return especialidadDAO.actualizar(especialidad, id);
+    }
+
+    public boolean eliminar(int id) {
+        return especialidadDAO.eliminar(id);
+    }
 }

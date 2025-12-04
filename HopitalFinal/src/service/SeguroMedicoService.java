@@ -15,4 +15,16 @@ public class SeguroMedicoService implements IService<SeguroMedico> {
     public void listar() {
         seguroDAO.listar();
     }
+
+    public SeguroMedico obtenerPorId(int id) {
+        return seguroDAO.obtenerPorId(id);
+    }
+
+    public boolean actualizar(SeguroMedico seguro, int id) {
+        return seguroDAO.actualizar(seguro, id);
+    }
+
+    public boolean eliminar(int id) {
+        return seguroDAO.eliminar(id);
+    }
 }

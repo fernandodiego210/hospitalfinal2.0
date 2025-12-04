@@ -15,4 +15,16 @@ public class TipoExamenService implements IService<TipoExamen> {
     public void listar() {
         tipoDAO.listar();
     }
+
+    public TipoExamen obtenerPorId(int id) {
+        return tipoDAO.obtenerPorId(id);
+    }
+
+    public boolean actualizar(TipoExamen tipo, int id) {
+        return tipoDAO.actualizar(tipo, id);
+    }
+
+    public boolean eliminar(int id) {
+        return tipoDAO.eliminar(id);
+    }
 }

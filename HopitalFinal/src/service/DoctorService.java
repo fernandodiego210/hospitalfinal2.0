@@ -15,4 +15,16 @@ public class DoctorService implements IService<Doctor> {
     public void listar() {
         doctorDAO.listar();
     }
+
+    public Doctor obtenerPorId(String id) {
+        return doctorDAO.obtenerPorId(id);
+    }
+
+    public boolean actualizar(Doctor doctor, String id) {
+        return doctorDAO.actualizar(doctor, id);
+    }
+
+    public boolean eliminar(String id) {
+        return doctorDAO.eliminar(id);
+    }
 }

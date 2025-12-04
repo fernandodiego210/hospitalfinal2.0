@@ -15,4 +15,16 @@ public class CirugiaService implements IService<Cirugia> {
     public void listar() {
         cirugiaDAO.listar();
     }
+
+    public Cirugia obtenerPorId(int id) {
+        return cirugiaDAO.obtenerPorId(id);
+    }
+
+    public boolean actualizar(Cirugia cirugia, int id) {
+        return cirugiaDAO.actualizar(cirugia, id);
+    }
+
+    public boolean eliminar(int id) {
+        return cirugiaDAO.eliminar(id);
+    }
 }

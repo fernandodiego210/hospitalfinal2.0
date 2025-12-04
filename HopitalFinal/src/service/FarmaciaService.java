@@ -15,4 +15,16 @@ public class FarmaciaService implements IService<Farmacia> {
     public void listar() {
         farmaciaDAO.listar();
     }
+
+    public Farmacia obtenerPorId(int id) {
+        return farmaciaDAO.obtenerPorId(id);
+    }
+
+    public boolean actualizar(Farmacia farmacia, int id) {
+        return farmaciaDAO.actualizar(farmacia, id);
+    }
+
+    public boolean eliminar(int id) {
+        return farmaciaDAO.eliminar(id);
+    }
 }

@@ -15,4 +15,16 @@ public class CitaService implements IService<Cita> {
     public void listar() {
         citaDAO.listar();
     }
+
+    public Cita obtenerPorId(int id) {
+        return citaDAO.obtenerPorId(id);
+    }
+
+    public boolean actualizar(Cita cita, int id) {
+        return citaDAO.actualizar(cita, id);
+    }
+
+    public boolean eliminar(int id) {
+        return citaDAO.eliminar(id);
+    }
 }
